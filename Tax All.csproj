@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{375047E4-ACD9-45E8-9D37-BE6A6FEAB977}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Tax_All</RootNamespace>
+    <AssemblyName>Tax All</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HOME.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HOME.Designer.cs">
+      <DependentUpon>HOME.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControlGroup1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlGroup1.Designer.cs">
+      <DependentUpon>UserControlGroup1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlGroup2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlGroup2.Designer.cs">
+      <DependentUpon>UserControlGroup2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlGroup3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlGroup3.Designer.cs">
+      <DependentUpon>UserControlGroup3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlGroup4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlGroup4.Designer.cs">
+      <DependentUpon>UserControlGroup4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlGroup5.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlGroup5.Designer.cs">
+      <DependentUpon>UserControlGroup5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlGroupTown.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlGroupTown.Designer.cs">
+      <DependentUpon>UserControlGroupTown.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HOME.resx">
+      <DependentUpon>HOME.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControlGroup1.resx">
+      <DependentUpon>UserControlGroup1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlGroup2.resx">
+      <DependentUpon>UserControlGroup2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlGroup3.resx">
+      <DependentUpon>UserControlGroup3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlGroup4.resx">
+      <DependentUpon>UserControlGroup4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlGroup5.resx">
+      <DependentUpon>UserControlGroup5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlGroupTown.resx">
+      <DependentUpon>UserControlGroupTown.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cartoon-money-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dollar-png-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\75-758641_home-logo-wwwpixsharkcom-images-galleries-with-a-bite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-icon-png-home-house-icon-image-202-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\58afdad6829958a978a4a693.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tax-4_cover_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9-94763_grey-close-x-cross-icon-png-grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6863093_preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ลูกศร.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\travel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\family1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
