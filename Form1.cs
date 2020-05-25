@@ -7,91 +7,62 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Serialization;
 
-namespace Tax_All
+namespace Taxx
 {
     public partial class Form1 : Form
     {
         public Form1()
         {
             InitializeComponent();
-            CustomizeDesing();
-            
-            userControlGroup21.BringToFront();
-            userControlGroup31.BringToFront();
-            userControlGroup41.BringToFront();
-            userControlGroup11.BringToFront();
-            userControlGroup51.BringToFront();
-            home1.BringToFront();
-
-        }
-        private void CustomizeDesing()
-        {
-            panelGroup5.Visible = false;
         }
 
-        private void HideSubMenu()
+
+        private Form activeForm = null;
+        private void openChildFormInPanel(Form childForm)
         {
-            if (panelGroup5.Visible == true)
-                panelGroup5.Visible = false; 
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panel1.Controls.Add(childForm);
+            panel1.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
 
-        private void ShowSubMenu (Panel subMenu)
-        {
-            if (subMenu.Visible == false)
-            {
-                HideSubMenu();
-                subMenu.Visible = true;
-            }
-            else
-                subMenu.Visible = false;
-        }
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            userControlGroup21.BringToFront();
-        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
-            home1.BringToFront();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            userControlGroup11.BringToFront();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            userControlGroup31.BringToFront();
+            openChildFormInPanel(new Home());
+            
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Application.Exit();//ออกจากโปรแกรม
+            Application.Exit();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void bt_cal_Click(object sender, EventArgs e)
         {
-            userControlGroup41.BringToFront();
+            int month = int.Parse(textBox1.Text);
+            int Bn = int.Parse(textBox2.Text);
+            int etc = int.Parse(textBox3.Text);
+            int oc;
+            oc = (month * 12) + Bn + etc;
+            textBox4.Text = oc.ToString();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void bt_sent_Click(object sender, EventArgs e)
         {
-            ShowSubMenu(panelGroup5);
-            userControlGroup51.BringToFront();
-        }
-
-        private void btGroup5_Click(object sender, EventArgs e)
-        {
-            userControlGroupTown1.BringToFront();
-            HideSubMenu();
+            Group1 tax = new Group1();
+            tax.textBoxPungpamern01.Text = textBox4.Text;
+            tax.Show();
+            this.Hide();
         }
     }
 }
